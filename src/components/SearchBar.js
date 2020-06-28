@@ -3,10 +3,17 @@ import { StyleSheet, Text, View, TextInput } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-export default function SearchBar({query, onQueryChange}) {
+export default function SearchBar({ query, onQueryChange }) {
   return (
     <View style={styles.container}>
-      <TextInput  value={query}  onChangeText={(value) => onQueryChange(value)}   style={styles.input} placeholder="Search" />
+      <TextInput
+        autoCapitalize="none"
+        autoCorrect={false}
+        value={query}
+        onChangeText={(value) => onQueryChange(value)}
+        style={styles.input}
+        placeholder="Search"
+      />
       <TouchableOpacity>
         <MaterialIcons
           style={styles.icon}
@@ -23,7 +30,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#000",
     padding: 15,
-    paddingHorizontal:25,
+    paddingHorizontal: 25,
     margin: 15,
     marginTop: 25,
     borderRadius: 50,
