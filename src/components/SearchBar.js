@@ -21,11 +21,12 @@ export default function SearchBar() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#222",
-    padding: 25,
+    backgroundColor: "#111",
+    padding: 15,
+    paddingHorizontal:25,
     margin: 15,
     marginTop: 25,
-    borderRadius: 20,
+    borderRadius: 50,
     shadowColor: "#000",
     shadowOffset: {
       height: 5,
@@ -40,10 +41,10 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 20,
     letterSpacing: 2,
-    width: "100%",
+    width: "90%",
   },
   icon: {
     // position:'absolute',
-    // left:100
+    // right:10
   },
 });
