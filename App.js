@@ -1,16 +1,15 @@
 import {createAppContainer, createStackNavigator} from 'react-navigation';
+import SearchScreen from './src/screens/SearchScreen';
 
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-const Tab = createBottomTabNavigator();
+const navigator = createStackNavigator({
+      Search: SearchScreen
+},
+{
+    initialRouteName:'Search',
+    defaultNavigationOptions:{
+      title:'                     Restro Finder 🤑           ' ,
+    }
+});
 
-function MyTabs() {
-  return (
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Settings" component={SettingsScreen} />
-    </Tab.Navigator>
-  );
-}
-
-const styles = StyleSheet.create({})
+export default createAppContainer(navigator);
