@@ -7,10 +7,12 @@ export default function App() {
     <View style={styles.container}>
       <Text>Restro Finder</Text>
       <StatusBar style="dark"
-       backgroundColor="#888"
+       backgroundColor="#512DA8ae"
        hideTransitionAnimation="slide"
        animated={true}
-       hidden={true} 
+      //  hidden={true} 
+      networkActivityIndicatorVisible={true}
+      // translucent={false}
       />
     </View>
   );
