@@ -21,7 +21,7 @@ export default function SearchBar() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#111",
+    backgroundColor: "#000",
     padding: 15,
     paddingHorizontal:25,
     margin: 15,
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   },
   input: {
     color: "white",
-    fontSize: 20,
+    fontSize: 22,
     letterSpacing: 2,
     width: "90%",
   },
