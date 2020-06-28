@@ -1,28 +1,16 @@
-import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import {createAppContainer, createStackNavigator} from 'react-navigation';
 
-export default function App() {
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+const Tab = createBottomTabNavigator();
+
+function MyTabs() {
   return (
-    <View style={styles.container}>
-      <Text>Restro Finder</Text>
-      <StatusBar style="dark"
-       backgroundColor="#512DA8ae"
-       hideTransitionAnimation="slide"
-       animated={true}
-      //  hidden={true} 
-      networkActivityIndicatorVisible={true}
-      // translucent={false}
-      />
-    </View>
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Settings" component={SettingsScreen} />
+    </Tab.Navigator>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+const styles = StyleSheet.create({})
