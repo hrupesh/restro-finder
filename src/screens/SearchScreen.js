@@ -7,7 +7,7 @@ export default function SearchScreen() {
   return (
     <View style={styles.container}>
       <SearchBar />
-      <StatusBar backgroundColor="#FFF" ></StatusBar>
+      <StatusBar backgroundColor="#448AFFCF" ></StatusBar>
     </View>
   );
 }
