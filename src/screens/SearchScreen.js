@@ -8,12 +8,11 @@ export default function SearchScreen() {
 
   return (
     <View style={styles.container}>
-      <SearchBar />
-      <StatusBar
-        backgroundColor="#448AFFCF"
+      <StatusBar backgroundColor="#448AFFCF"></StatusBar>
+      <SearchBar
         query={query}
         onQueryChange={(newQuery) => setQuery(newQuery)}
-      ></StatusBar>
+      />
       <Text>Searching for : {query}</Text>
     </View>
   );
