@@ -5,6 +5,7 @@ import { StatusBar } from "expo-status-bar";
 
 export default function SearchScreen() {
   const [query, setQuery] = useState("");
+  const [resutls, setResults] = useState([]);
 
   return (
     <View style={styles.container}>
@@ -13,7 +14,11 @@ export default function SearchScreen() {
         query={query}
         onQueryChange={(newQuery) => setQuery(newQuery)}
       />
-      <Text>Searching for : {query}</Text>
+      <View style={styles.resultContainer}>
+        <Text>
+          We found {resutls.length} results for { query.length > 0 ? query : "Ghost Restro's 👻 " }
+        </Text>
+      </View>
     </View>
   );
 }
@@ -22,5 +27,9 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#ddd",
     flex: 1,
+  },
+  resultContainer: {
+    paddingHorizontal: 40,
+    paddingVertical: 10,
   },
 });
