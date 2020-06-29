@@ -2,32 +2,11 @@ import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import SearchBar from "../components/SearchBar";
 import { StatusBar } from "expo-status-bar";
-import yelp from "../api/yelp";
+import useResults from "../hooks/useResults";
 
 export default function SearchScreen() {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState([]);
-  const [error, setError] = useState("");
-
-  const searchAPI = async (searchTerm) => {
-    try {
-      const response = await yelp.get("/search", {
-        params: {
-          limit: 50,
-          term: searchTerm,
-          location: "New York",
-        },
-      });
-      setResults(response.data.businesses);
-      console.log(results);
-    } catch (e) {
-      setError("Something went wrong 🥴");
-    }
-  };
-
-  useEffect(() => {
-    searchAPI("rupesh");
-  }, []);
+  const [searchAPI, results, error] = useResults();
 
   return (
     <View style={styles.container}>
