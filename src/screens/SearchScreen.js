@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import SearchBar from "../components/SearchBar";
 import { StatusBar } from "expo-status-bar";
