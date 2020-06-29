@@ -34,7 +34,7 @@ export default function SearchScreen() {
         search={() => searchAPI()}
       />
       <View style={styles.resultContainer}>
-        <Text>{error.length > 0 ? error : "Successfull"}</Text>
+        <Text>{error  === '' ? error : ""}</Text>
         <Text>We found {results.length} results</Text>
       </View>
     </View>
