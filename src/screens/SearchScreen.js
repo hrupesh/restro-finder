@@ -9,12 +9,12 @@ export default function SearchScreen() {
   const [results, setResults] = useState([]);
   const [error, setError] = useState("");
 
-  const searchAPI = async () => {
+  const searchAPI = async (searchTerm) => {
     try {
       const response = await yelp.get("/search", {
         params: {
           limit: 50,
-          term: query,
+          term: searchTerm,
           location: "New York",
         },
       });
@@ -31,10 +31,10 @@ export default function SearchScreen() {
       <SearchBar
         query={query}
         onQueryChange={(newQuery) => setQuery(newQuery)}
-        search={() => searchAPI()}
+        search={() => searchAPI(query)}
       />
       <View style={styles.resultContainer}>
-        <Text>{error  === '' ? error : ""}</Text>
+        { error ? <Text>{error}</Text> : null}
         <Text>We found {results.length} results</Text>
       </View>
     </View>
