@@ -9,12 +9,12 @@ export default function SearchScreen() {
   const [results, setResults] = useState([]);
 
   const searchAPI = async () => {
-    const response = await yelp.get("/search",{
-      params:{
-        limit:50,
-        term:query,
-        location:'New York'
-      }
+    const response = await yelp.get("/search", {
+      params: {
+        limit: 50,
+        term: query,
+        location: "New York",
+      },
     });
     setResults(response.data.businesses);
     console.log(results);
@@ -25,8 +25,9 @@ export default function SearchScreen() {
       <StatusBar backgroundColor="#448AFFCF"></StatusBar>
       <SearchBar
         query={query}
-        onQueryChange={(newQuery) => setQuery(newQuery),searchAPI}
+        onQueryChange={(newQuery) => setQuery(newQuery)}
       />
+      <Button title="Hit Api" onPress={() => searchAPI()} />
       <View style={styles.resultContainer}>
         <Text>
           We found {results.length} results for{" "}
