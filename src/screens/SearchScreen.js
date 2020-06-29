@@ -26,12 +26,12 @@ export default function SearchScreen() {
       <SearchBar
         query={query}
         onQueryChange={(newQuery) => setQuery(newQuery)}
+        search={() => searchAPI()}
       />
       <Button title="Hit Api" onPress={() => searchAPI()} />
       <View style={styles.resultContainer}>
         <Text>
-          We found {results.length} results for{" "}
-          {query.length > 0 ? query : "Ghost Restro's 👻 "}
+          We found {results.length} results
         </Text>
       </View>
     </View>

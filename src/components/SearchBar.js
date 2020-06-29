@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TextInput } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-export default function SearchBar({ query, onQueryChange }) {
+export default function SearchBar({ query, onQueryChange, search }) {
 
  const [localQuery, setlocalQuery] = useState(query);
 
@@ -12,13 +12,13 @@ export default function SearchBar({ query, onQueryChange }) {
       <TextInput
         autoCapitalize="none"
         autoCorrect={false}
-        value={localQuery}
-        onChangeText={(value) => setlocalQuery(value)}
+        value={query}
+        onChangeText={(value) => onQueryChange(value)}
         style={styles.input}
         placeholder="Search"
       />
       <TouchableOpacity 
-         onPress={() => localQuery.length > 0 ?  onQueryChange(localQuery) : alert("Cannot search a ghost restro 😜")}>
+         onPress={() => search()}>
         <MaterialIcons
           style={styles.icon}
           name="search"
@@ -26,7 +26,6 @@ export default function SearchBar({ query, onQueryChange }) {
           color="white"
         />
       </TouchableOpacity>
-  <Text>{localQuery}</Text>
     </View>
   );
 }
@@ -44,7 +43,7 @@ const styles = StyleSheet.create({
       height: 5,
     },
     shadowOpacity: 0.5,
-    shadowRadius: 2,
+    shadowRadius: 100,
     elevation: 10,
     color: "white",
     flexDirection: "row",
