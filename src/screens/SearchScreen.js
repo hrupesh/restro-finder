@@ -33,6 +33,7 @@ export default function SearchScreen() {
         onQueryChange={(newQuery) => setQuery(newQuery)}
         search={() => searchAPI()}
       />
+      <Text>{error.length > 0 ? error : "Successfull"}</Text>
       <View style={styles.resultContainer}>
         <Text>We found {results.length} results</Text>
       </View>
