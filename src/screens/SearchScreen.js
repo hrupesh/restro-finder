@@ -20,9 +20,9 @@ export default function SearchScreen() {
       <View style={styles.resultContainer}>
         {error ? <Text>{error}</Text> : null}
         <Text>We found {results.length} results</Text>
-        <ResultList  title="Wallet Friendly" />
-        <ResultList  title="Expensive"/>
-        <ResultList  title="Luxury"/>
+        <ResultList  title="Wallet Friendly 🤑" />
+        <ResultList  title="Expensive 💰"/>
+        <ResultList  title="Luxury 💸"/>
       </View>
     </View>
   );
