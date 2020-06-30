@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native'
 export default function ResultList({title}) {
     return (
         <View>
-            <Text>{title}</Text>
+            <Text style={styles.title}>{title}</Text>
         </View>
     )
 }
