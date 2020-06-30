@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Button } from "react-native";
 import SearchBar from "../components/SearchBar";
 import { StatusBar } from "expo-status-bar";
 import useResults from "../hooks/useResults";
+import ResultList from "../components/ResultList";
 
 export default function SearchScreen() {
   const [query, setQuery] = useState("");
@@ -19,6 +20,9 @@ export default function SearchScreen() {
       <View style={styles.resultContainer}>
         {error ? <Text>{error}</Text> : null}
         <Text>We found {results.length} results</Text>
+        <ResultList />
+        <ResultList />
+        <ResultList />
       </View>
     </View>
   );
