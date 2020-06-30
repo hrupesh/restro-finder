@@ -21,6 +21,7 @@ export default function SearchScreen() {
         <Text>We found {results.length} results</Text>
       </View>
     </View>
+    sdfsd
   );
 }
 
