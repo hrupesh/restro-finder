@@ -1,10 +1,13 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import { ScrollView, FlatList } from 'react-native-gesture-handler'
 
-export default function ResultList({title}) {
+export default function ResultList({title,results}) {
     return (
         <View>
             <Text style={styles.title}>{title}</Text>
+            
+            
         </View>
     )
 }

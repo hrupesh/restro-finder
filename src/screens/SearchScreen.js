@@ -9,6 +9,12 @@ export default function SearchScreen() {
   const [query, setQuery] = useState("");
   const [searchAPI, results, error] = useResults();
 
+  const filterResults = (price) => {
+    return results.filter((result) => {
+      return result.price === price;
+    });
+  };
+
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor="#448AFFCF"></StatusBar>
@@ -20,9 +26,9 @@ export default function SearchScreen() {
       <View style={styles.resultContainer}>
         {error ? <Text>{error}</Text> : null}
         <Text>We found {results.length} results</Text>
-        <ResultList  title="Wallet Friendly 🤑" />
-        <ResultList  title="Expensive 💰"/>
-        <ResultList  title="Luxury 💸"/>
+        <ResultList results={filterResults('$')} title="Wallet Friendly 🤑" />
+        <ResultList results={filterResults('$$')} title="Expensive 💰" />
+        <ResultList results={filterResults('$$$')} title="Luxury 💸" />
       </View>
     </View>
   );
