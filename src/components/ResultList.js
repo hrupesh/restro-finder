@@ -10,6 +10,7 @@ export default function ResultList({ title, results }) {
       <Text  style={styles.length} >({results.length})</Text>
       <FlatList
         horizontal
+        showsHorizontalScrollIndicator={false}
         data={results}
         keyExtractor={(result) => result.id}
         renderItem={({ item }) => {
