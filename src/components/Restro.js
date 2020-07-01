@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, ImageBackground } from "react-native";
 import Rating from "./Rating";
+import { round } from "react-native-reanimated";
 
 export default function Restro({ restro }) {
   const image = { uri: restro.image_url };
@@ -8,7 +9,7 @@ export default function Restro({ restro }) {
     <View style={{ marginHorizontal: 15 }}>
       <ImageBackground source={image} style={styles.imgcontainer}>
         <Text style={styles.name}>{restro.name}</Text>
-        <Rating style={styles.rating} rating="4" />
+        <Rating style={styles.rating} rating={Math.round(restro.rating)} counts={restro.review_count} />
       </ImageBackground>
       <Text>{restro.phone}</Text>
       <Text>{restro.rating}</Text>
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
     },
     textShadowRadius: 5,
   },
-  rating:{
-      backgroundColor:'#000'
-  }
+  rating: {
+    backgroundColor: "#000",
+  },
 });
