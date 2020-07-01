@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 
-export default function ImgCard(props) {
+export default function Rating(props) {
   // console.log(props);
   var star = <AntDesign name="star" size={20} color="#212121" />;
 
@@ -72,15 +72,15 @@ export default function ImgCard(props) {
   return (
     <TouchableOpacity activeOpacity={0.8} style={styles.card}>
       {/* <Feather name="image" size={75} color="white" /> */}
-      <Image
+      {/* <Image
         fadeDuration={100}
         style={styles.img}
         source={{ uri: props.imgurl }}
-      />
+      /> */}
       <View>
-        <Text numberOfLines={1} style={styles.cardText}>
+        {/* <Text numberOfLines={1} style={styles.cardText}>
           {props.item}
-        </Text>
+        </Text> */}
         <Text style={styles.cardRating}>{star}</Text>
       </View>
     </TouchableOpacity>
