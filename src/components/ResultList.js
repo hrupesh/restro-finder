@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { ScrollView, FlatList } from "react-native-gesture-handler";
+import Restro from "./Restro";
 
 export default function ResultList({ title, results }) {
   return (
@@ -13,7 +14,7 @@ export default function ResultList({ title, results }) {
         data={results}
         keyExtractor={(result) => result.id}
         renderItem={({ item }) => {
-          return <Text style={styles.item}>{item.name}</Text>;
+          return <Restro restro={item.name} />
         }}
         style={styles.list}
       />
@@ -31,14 +32,4 @@ const styles = StyleSheet.create({
       margin:5,
       fontSize:24,
   },
-  item:{
-      fontSize:24,
-      backgroundColor:'#512DA8',
-      padding:10,
-      marginHorizontal:10,
-      color:'white',
-      height:100,
-      alignContent:'center',
-      justifyContent:'center'
-  }
 });
