@@ -10,51 +10,51 @@ export default function Rating(props) {
   if (props.rating == 5) {
     star = (
       <Text>
-        <AntDesign sty name="star" size={20} color="#FFFFFF" />
-        <AntDesign name="star" size={20} color="#FFFFFF" />
-        <AntDesign name="star" size={20} color="#FFFFFF" />
-        <AntDesign name="star" size={20} color="#FFFFFF" />
-        <AntDesign name="star" size={20} color="#FFFFFF" />
+        <AntDesign sty name="star" size={20} color="#fff" />
+        <AntDesign name="star" size={20} color="#fff" />
+        <AntDesign name="star" size={20} color="#fff" />
+        <AntDesign name="star" size={20} color="#fff" />
+        <AntDesign name="star" size={20} color="#fff" />
       </Text>
     );
   } else if (props.rating == 4) {
     star = (
       <Text>
-        <AntDesign name="star" size={20} color="#FFFFFF" />
-        <AntDesign name="star" size={20} color="#FFFFFF" />
-        <AntDesign name="star" size={20} color="#FFFFFF" />
-        <AntDesign name="star" size={20} color="#FFFFFF" />
-        <AntDesign name="staro" size={20} color="#FFFFFF" />
+        <AntDesign name="star" size={20} color="#fff" />
+        <AntDesign name="star" size={20} color="#fff" />
+        <AntDesign name="star" size={20} color="#fff" />
+        <AntDesign name="star" size={20} color="#fff" />
+        <AntDesign name="staro" size={20} color="#fff" />
       </Text>
     );
   } else if (props.rating == 3) {
     star = (
       <Text>
-        <AntDesign name="star" size={20} color="#FFFFFF" />
-        <AntDesign name="star" size={20} color="#FFFFFF" />
-        <AntDesign name="star" size={20} color="#FFFFFF" />
-        <AntDesign name="staro" size={20} color="#FFFFFF" />
-        <AntDesign name="staro" size={20} color="#FFFFFF" />
+        <AntDesign name="star" size={20} color="#fff" />
+        <AntDesign name="star" size={20} color="#fff" />
+        <AntDesign name="star" size={20} color="#fff" />
+        <AntDesign name="staro" size={20} color="#fff" />
+        <AntDesign name="staro" size={20} color="#fff" />
       </Text>
     );
   } else if (props.rating == 2) {
     star = (
       <Text>
-        <AntDesign name="star" size={20} color="#FFFFFF" />
-        <AntDesign name="star" size={20} color="#FFFFFF" />
-        <AntDesign name="staro" size={20} color="#FFFFFF" />
-        <AntDesign name="staro" size={20} color="#FFFFFF" />
-        <AntDesign name="staro" size={20} color="#FFFFFF" />
+        <AntDesign name="star" size={20} color="#fff" />
+        <AntDesign name="star" size={20} color="#fff" />
+        <AntDesign name="staro" size={20} color="#fff" />
+        <AntDesign name="staro" size={20} color="#fff" />
+        <AntDesign name="staro" size={20} color="#fff" />
       </Text>
     );
   } else if (props.rating == 1) {
     star = (
       <Text>
-        <AntDesign name="star" size={20} color="#FFFFFF" />
-        <AntDesign name="staro" size={20} color="#FFFFFF" />
-        <AntDesign name="staro" size={20} color="#FFFFFF" />
-        <AntDesign name="staro" size={20} color="#FFFFFF" />
-        <AntDesign name="staro" size={20} color="#FFFFFF" />
+        <AntDesign name="star" size={20} color="#fff" />
+        <AntDesign name="staro" size={20} color="#fff" />
+        <AntDesign name="staro" size={20} color="#fff" />
+        <AntDesign name="staro" size={20} color="#fff" />
+        <AntDesign name="staro" size={20} color="#fff" />
       </Text>
     );
   } else {
@@ -70,20 +70,7 @@ export default function Rating(props) {
   }
 
   return (
-    <TouchableOpacity activeOpacity={0.8} style={styles.card}>
-      {/* <Feather name="image" size={75} color="white" /> */}
-      {/* <Image
-        fadeDuration={100}
-        style={styles.img}
-        source={{ uri: props.imgurl }}
-      /> */}
-      <View>
-        {/* <Text numberOfLines={1} style={styles.cardText}>
-          {props.item}
-        </Text> */}
         <Text style={styles.cardRating}>{star}</Text>
-      </View>
-    </TouchableOpacity>
   );
 }
 
@@ -128,9 +115,15 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   cardRating: {
-    fontSize: 20,
+    fontSize: 24,
     color: "white",
-    padding: 20,
-    paddingHorizontal: 25,
+    padding: 10,
+    margin:10,
+    // paddingHorizontal: 25,
+    position:'absolute',
+    top:0,
+    right:0,
+    backgroundColor:'#0004',
+    borderRadius:20
   },
 });

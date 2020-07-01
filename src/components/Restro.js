@@ -1,12 +1,14 @@
 import React from "react";
 import { StyleSheet, Text, View, ImageBackground } from "react-native";
+import Rating from "./Rating";
 
 export default function Restro({ restro }) {
   const image = { uri: restro.image_url };
   return (
-    <View style={{ marginHorizontal: 15, }}>
+    <View style={{ marginHorizontal: 15 }}>
       <ImageBackground source={image} style={styles.imgcontainer}>
         <Text style={styles.name}>{restro.name}</Text>
+        <Rating style={styles.rating} rating="4" />
       </ImageBackground>
       <Text>{restro.phone}</Text>
       <Text>{restro.rating}</Text>
@@ -45,4 +47,7 @@ const styles = StyleSheet.create({
     },
     textShadowRadius: 5,
   },
+  rating:{
+      backgroundColor:'#000'
+  }
 });
