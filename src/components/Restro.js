@@ -5,7 +5,7 @@ export default function Restro({ restro }) {
   const image = { uri: restro.image_url };
   return (
     <ImageBackground source={image} style={styles.imgcontainer}>
-      <Text style={styles.name}>Name is {restro.name}</Text>
+      <Text style={styles.name}>{restro.name}</Text>
     </ImageBackground>
   );
 }
@@ -15,8 +15,8 @@ const styles = StyleSheet.create({
     // flex: 1,
     // resizeMode: "cover",
     justifyContent: "flex-end",
-    height: 160,
-    width: 270,
+    height: 200,
+    width: 300,
     padding: 10,
     marginHorizontal: 15,
     marginVertical: 10,
@@ -29,4 +29,15 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     elevation: 2,
   },
+  name:{
+      color:'white',
+      fontSize:18,
+      letterSpacing:2,
+      textShadowColor:'#000',
+      textShadowOffset:{
+          width:5,
+          height:1
+      },
+      textShadowRadius:5
+  }
 });

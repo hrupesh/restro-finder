@@ -4,6 +4,7 @@ import SearchBar from "../components/SearchBar";
 import { StatusBar } from "expo-status-bar";
 import useResults from "../hooks/useResults";
 import ResultList from "../components/ResultList";
+import { ScrollView } from "react-native-gesture-handler";
 
 export default function SearchScreen() {
   const [query, setQuery] = useState("");
@@ -15,8 +16,14 @@ export default function SearchScreen() {
     });
   };
 
+  const filterResultsOthers = (price) => {
+    return results.filter((result) => {
+      return !("price" in result);
+    });
+  };
+
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <StatusBar backgroundColor="#448AFFCF"></StatusBar>
       <SearchBar
         query={query}
@@ -26,12 +33,13 @@ export default function SearchScreen() {
       <View style={styles.resultContainer}>
         {error ? <Text>{error}</Text> : null}
         <Text>We found {results.length} results</Text>
-        <ResultList results={filterResults('$')} title="Wallet Friendly 🤑" />
-        <ResultList results={filterResults('$$')} title="Expensive 💰" />
-        <ResultList results={filterResults('$$$')} title="Luxury 💸" />
+        <ResultList results={filterResults("$")} title="Wallet Friendly 🤑" />
+        <ResultList results={filterResults("$$")} title="Expensive 💰" />
+        <ResultList results={filterResults("$$$")} title="Luxury 💸" />
+        <ResultList results={filterResultsOthers("$$$$")} title="Others " />
         {/* <ResultList results={filterResults('$$$$')} title="Luxury 💸" /> */}
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -41,7 +49,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   resultContainer: {
-    paddingHorizontal: 40,
+    paddingHorizontal: 20,
     paddingVertical: 10,
   },
 });
