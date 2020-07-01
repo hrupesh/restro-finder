@@ -4,14 +4,14 @@ import { StyleSheet, Text, View, ImageBackground } from "react-native";
 export default function Restro({ restro }) {
   const image = { uri: restro.image_url };
   return (
-    <View>
+    <View style={{ marginHorizontal: 15, }}>
       <ImageBackground source={image} style={styles.imgcontainer}>
         <Text style={styles.name}>{restro.name}</Text>
       </ImageBackground>
-  <Text>{restro.phone}</Text>
-  <Text>{restro.rating}</Text>
-  <Text>{restro.review_count}</Text>
-  <Text>{restro.location.city}</Text>
+      <Text>{restro.phone}</Text>
+      <Text>{restro.rating}</Text>
+      <Text>{restro.review_count}</Text>
+      <Text>{restro.location.city}</Text>
     </View>
   );
 }
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     height: 200,
     width: 300,
     padding: 20,
-    marginHorizontal: 15,
+    marginHorizontal: 0,
     marginVertical: 10,
     shadowColor: "#000",
     shadowOffset: {
