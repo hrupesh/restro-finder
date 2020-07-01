@@ -29,6 +29,7 @@ export default function SearchScreen() {
         <ResultList results={filterResults('$')} title="Wallet Friendly 🤑" />
         <ResultList results={filterResults('$$')} title="Expensive 💰" />
         <ResultList results={filterResults('$$$')} title="Luxury 💸" />
+        <ResultList results={filterResults('$$$$')} title="Luxury 💸" />
       </View>
     </View>
   );
