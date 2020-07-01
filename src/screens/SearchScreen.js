@@ -35,7 +35,7 @@ export default function SearchScreen() {
         <Text>We found {results.length} results</Text>
         <ResultList results={filterResults("$")} title="Wallet Friendly 🤑" />
         <ResultList results={filterResults("$$")} title="Expensive 💰" />
-        <ResultList results={filterResults("$$$")} title="Luxury 💸" />
+        { filterResults("$$$").length > 0 ?  <ResultList results={filterResults("$$$")} title="Luxury 💸" /> : null}
         <ResultList results={filterResultsOthers("$$$$")} title="Other Places 🏚 " />
         {/* <ResultList results={filterResults('$$$$')} title="Luxury 💸" /> */}
       </View>
