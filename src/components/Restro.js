@@ -8,10 +8,12 @@ export default function Restro({ restro }) {
   return (
     <View style={{ marginHorizontal: 15 }}>
       <ImageBackground
-        borderBottomLeftRadius={10}
-        borderBottomRightRadius={10}
-        borderTopLeftRadius={10}
-        borderTopRightRadius={10}
+        borderBottomLeftRadius={25}
+        borderBottomRightRadius={25}
+        borderTopLeftRadius={25}
+        borderTopRightRadius={25}
+        fadeDuration={10}
+        onProgress={() => alert("Loading.....")}
         source={image}
         style={styles.imgcontainer}
       >
@@ -50,11 +52,12 @@ const styles = StyleSheet.create({
   },
   name: {
     color: "white",
-    fontSize: 18,
+    fontSize: 22,
+    fontWeight:'bold',
     letterSpacing: 2,
     textShadowColor: "#000",
     textShadowOffset: {
-      width: 5,
+      width: 2,
       height: 1,
     },
     textShadowRadius: 5,

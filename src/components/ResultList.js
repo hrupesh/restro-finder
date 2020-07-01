@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
   },
   list: {
     margin: 5,
+    marginVertical:15,
     fontSize: 24,
   },
   length:{
