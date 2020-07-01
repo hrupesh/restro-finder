@@ -70,7 +70,7 @@ export default function Rating(props) {
   }
 
   return (
-        <Text style={styles.cardRating}>{star}</Text>
+      <Text style={styles.cardRating}>{star}</Text>
   );
 }
 
@@ -118,12 +118,12 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: "white",
     padding: 10,
-    margin:10,
+    margin: 10,
     // paddingHorizontal: 25,
-    position:'absolute',
-    top:0,
-    right:0,
-    backgroundColor:'#0004',
-    borderRadius:20
+    position: "absolute",
+    top: 0,
+    right: 0,
+    backgroundColor: "#0004",
+    borderRadius: 20,
   },
 });
