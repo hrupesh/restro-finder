@@ -14,7 +14,7 @@ export default function ResultList({ title, results }) {
         data={results}
         keyExtractor={(result) => result.id}
         renderItem={({ item }) => {
-          return <Restro restro={item.name} />
+          return <Restro restro={item} />
         }}
         style={styles.list}
       />
