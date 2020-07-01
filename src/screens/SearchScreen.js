@@ -36,7 +36,7 @@ export default function SearchScreen() {
         <ResultList results={filterResults("$")} title="Wallet Friendly 🤑" />
         <ResultList results={filterResults("$$")} title="Expensive 💰" />
         <ResultList results={filterResults("$$$")} title="Luxury 💸" />
-        <ResultList results={filterResultsOthers("$$$$")} title="Others " />
+        <ResultList results={filterResultsOthers("$$$$")} title="Other Places 🏚 " />
         {/* <ResultList results={filterResults('$$$$')} title="Luxury 💸" /> */}
       </View>
     </ScrollView>
