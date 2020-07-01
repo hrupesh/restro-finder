@@ -7,11 +7,24 @@ export default function Restro({ restro }) {
   const image = { uri: restro.image_url };
   return (
     <View style={{ marginHorizontal: 15 }}>
-      <ImageBackground source={image} style={styles.imgcontainer}>
+      <ImageBackground
+        borderBottomLeftRadius={10}
+        borderBottomRightRadius={10}
+        borderTopLeftRadius={10}
+        borderTopRightRadius={10}
+        source={image}
+        style={styles.imgcontainer}
+      >
         <Text style={styles.name}>{restro.name}</Text>
-        <Rating style={styles.rating} rating={Math.round(restro.rating)} counts={restro.review_count} />
+        <Rating
+          style={styles.rating}
+          rating={Math.round(restro.rating)}
+          counts={restro.review_count}
+        />
       </ImageBackground>
-      <Text style={styles.phone}>{restro.phone ? restro.phone : 'Not Available'}</Text>
+      <Text style={styles.phone}>
+        {restro.phone ? restro.phone : "Not Available"}
+      </Text>
       <Text style={styles.location}>{restro.location.city}</Text>
     </View>
   );
@@ -49,17 +62,17 @@ const styles = StyleSheet.create({
   rating: {
     backgroundColor: "#000",
   },
-  location:{
-      position:'absolute',
-      bottom:0,
-      right:5,
-      fontSize:20,
-      letterSpacing:1,
-      fontWeight:'bold'
+  location: {
+    position: "absolute",
+    bottom: 0,
+    right: 5,
+    fontSize: 20,
+    letterSpacing: 2,
+    fontWeight: "bold",
   },
-  phone:{
-      fontSize:16,
-      letterSpacing:0.5,
-      fontWeight:"700"
-  }
+  phone: {
+    fontSize: 16,
+    letterSpacing: 1,
+    fontWeight: "600",
+  },
 });

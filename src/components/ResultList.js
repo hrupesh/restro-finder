@@ -7,7 +7,7 @@ export default function ResultList({ title, results }) {
   return (
     <View>
       <Text style={styles.title}>{title}</Text>
-      <Text  style={styles.length} >({results.length})</Text>
+      {/* <Text  style={styles.length} >({results.length})</Text> */}
       <FlatList
         horizontal
         showsHorizontalScrollIndicator={false}
