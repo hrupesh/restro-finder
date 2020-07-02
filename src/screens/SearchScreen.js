@@ -23,7 +23,7 @@ export default function SearchScreen() {
   };
 
   return (
-    < >
+    <View style={styles.container}>
       <StatusBar backgroundColor="#448AFFCF"></StatusBar>
       <SearchBar
         query={query}
@@ -50,7 +50,7 @@ export default function SearchScreen() {
         ) : null}
         {/* <ResultList results={filterResults('$$$$')} title="Luxury 💸" /> */}
       </ScrollView>
-    </>
+    </View>
   );
 }
 
