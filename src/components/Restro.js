@@ -25,7 +25,11 @@ export default function Restro({ restro }) {
         />
       </ImageBackground>
       <Text style={styles.phone}>
-        {restro.phone ? restro.phone : "Not Available"}
+        {restro.review_count ? (
+          <Text style={styles.location}>{restro.review_count}</Text>
+        ) : (
+          "Not Available ⛔"
+        )}
       </Text>
       <Text style={styles.location}>{restro.location.city}</Text>
     </View>
@@ -53,7 +57,7 @@ const styles = StyleSheet.create({
   name: {
     color: "white",
     fontSize: 22,
-    fontWeight:'bold',
+    fontWeight: "bold",
     letterSpacing: 2,
     textShadowColor: "#000",
     textShadowOffset: {

@@ -32,11 +32,22 @@ export default function SearchScreen() {
       />
       <View style={styles.resultContainer}>
         {error ? <Text>{error}</Text> : null}
-        <Text>We found {results.length} results</Text>
-        <ResultList results={filterResults("$")} title="Wallet Friendly 🤑" />
-        <ResultList results={filterResults("$$")} title="Expensive 💰" />
-        { filterResults("$$$").length > 0 ?  <ResultList results={filterResults("$$$")} title="Luxury 💸" /> : null}
-        <ResultList results={filterResultsOthers("$$$$")} title="Other Places 🏚 " />
+        {results.length < 1 ? <Text>No results found!</Text> : null}
+        {filterResults("$").length > 0 ? (
+          <ResultList results={filterResults("$")} title="Wallet Friendly 🤑" />
+        ) : null}
+        {filterResults("$$").length > 0 ? (
+          <ResultList results={filterResults("$$")} title="Expensive 💰" />
+        ) : null}
+        {filterResults("$$$").length > 0 ? (
+          <ResultList results={filterResults("$$$")} title="Luxury 💸" />
+        ) : null}
+        {filterResultsOthers("$$$$").length > 0 ? (
+          <ResultList
+            results={filterResultsOthers("$$$$")}
+            title="Other Places 🏚 "
+          />
+        ) : null}
         {/* <ResultList results={filterResults('$$$$')} title="Luxury 💸" /> */}
       </View>
     </ScrollView>
