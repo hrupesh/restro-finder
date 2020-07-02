@@ -10,51 +10,51 @@ export default function Rating(props) {
   if (props.rating == 5) {
     star = (
       <Text>
-        <AntDesign sty name="star" size={20} color="#fff" />
-        <AntDesign name="star" size={20} color="#fff" />
-        <AntDesign name="star" size={20} color="#fff" />
-        <AntDesign name="star" size={20} color="#fff" />
-        <AntDesign name="star" size={20} color="#fff" />
+        <AntDesign sty name="star" size={20} color="#FFDF00" />
+        <AntDesign name="star" size={20} color="#FFDF00" />
+        <AntDesign name="star" size={20} color="#FFDF00" />
+        <AntDesign name="star" size={20} color="#FFDF00" />
+        <AntDesign name="star" size={20} color="#FFDF00" />
       </Text>
     );
   } else if (props.rating == 4) {
     star = (
       <Text>
-        <AntDesign name="star" size={20} color="#fff" />
-        <AntDesign name="star" size={20} color="#fff" />
-        <AntDesign name="star" size={20} color="#fff" />
-        <AntDesign name="star" size={20} color="#fff" />
-        <AntDesign name="staro" size={20} color="#fff" />
+        <AntDesign name="star" size={20} color="#FFDF00" />
+        <AntDesign name="star" size={20} color="#FFDF00" />
+        <AntDesign name="star" size={20} color="#FFDF00" />
+        <AntDesign name="star" size={20} color="#FFDF00" />
+        <AntDesign name="staro" size={20} color="#FFDF00" />
       </Text>
     );
   } else if (props.rating == 3) {
     star = (
       <Text>
-        <AntDesign name="star" size={20} color="#fff" />
-        <AntDesign name="star" size={20} color="#fff" />
-        <AntDesign name="star" size={20} color="#fff" />
-        <AntDesign name="staro" size={20} color="#fff" />
-        <AntDesign name="staro" size={20} color="#fff" />
+        <AntDesign name="star" size={20} color="#FFDF00" />
+        <AntDesign name="star" size={20} color="#FFDF00" />
+        <AntDesign name="star" size={20} color="#FFDF00" />
+        <AntDesign name="staro" size={20} color="#FFDF00" />
+        <AntDesign name="staro" size={20} color="#FFDF00" />
       </Text>
     );
   } else if (props.rating == 2) {
     star = (
       <Text>
-        <AntDesign name="star" size={20} color="#fff" />
-        <AntDesign name="star" size={20} color="#fff" />
-        <AntDesign name="staro" size={20} color="#fff" />
-        <AntDesign name="staro" size={20} color="#fff" />
-        <AntDesign name="staro" size={20} color="#fff" />
+        <AntDesign name="star" size={20} color="#FFDF00" />
+        <AntDesign name="star" size={20} color="#FFDF00" />
+        <AntDesign name="staro" size={20} color="#FFDF00" />
+        <AntDesign name="staro" size={20} color="#FFDF00" />
+        <AntDesign name="staro" size={20} color="#FFDF00" />
       </Text>
     );
   } else if (props.rating == 1) {
     star = (
       <Text>
-        <AntDesign name="star" size={20} color="#fff" />
-        <AntDesign name="staro" size={20} color="#fff" />
-        <AntDesign name="staro" size={20} color="#fff" />
-        <AntDesign name="staro" size={20} color="#fff" />
-        <AntDesign name="staro" size={20} color="#fff" />
+        <AntDesign name="star" size={20} color="#FFDF00" />
+        <AntDesign name="staro" size={20} color="#FFDF00" />
+        <AntDesign name="staro" size={20} color="#FFDF00" />
+        <AntDesign name="staro" size={20} color="#FFDF00" />
+        <AntDesign name="staro" size={20} color="#FFDF00" />
       </Text>
     );
   } else {
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 0,
     right: 0,
-    backgroundColor: "#0007",
+    backgroundColor: "#0004",
     borderRadius: 20,
     justifyContent: "center",
     alignItems: "center",
