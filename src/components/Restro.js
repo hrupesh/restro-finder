@@ -5,17 +5,17 @@ import Rating from "./Rating";
 export default function Restro({ restro }) {
   const image = { uri: restro.image_url };
   return (
-    <View style={{ marginHorizontal: 15 }}>
+    <View>
       <ImageBackground
         borderBottomLeftRadius={15}
         borderBottomRightRadius={15}
         borderTopLeftRadius={15}
         borderTopRightRadius={15}
         fadeDuration={0}
-        onProgress={() => alert("Loading.....")}
+        // onProgress={() => alert("Loading.....")}
         source={image}
         style={styles.imgcontainer}
-        loadingIndicatorSource={{ url : 'https://media2.giphy.com/media/xTk9ZvMnbIiIew7IpW/giphy.gif' }}
+        // loadingIndicatorSource={{ url : 'https://media2.giphy.com/media/xTk9ZvMnbIiIew7IpW/giphy.gif' }}
       >
         <Text style={styles.name}>{restro.name}</Text>
         <Rating

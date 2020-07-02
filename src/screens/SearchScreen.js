@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   resultContainer: {
-    paddingHorizontal: 15,
+    // paddingHorizontal: 15,
     paddingVertical: 10,
   },
 });
