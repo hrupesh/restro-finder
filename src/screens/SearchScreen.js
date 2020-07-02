@@ -23,14 +23,14 @@ export default function SearchScreen() {
   };
 
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       <StatusBar backgroundColor="#448AFFCF"></StatusBar>
       <SearchBar
         query={query}
         onQueryChange={(newQuery) => setQuery(newQuery)}
         search={() => searchAPI(query)}
       />
-      <View style={styles.resultContainer}>
+      <ScrollView style={styles.resultContainer}>
         {error ? <Text>{error}</Text> : null}
         {results.length < 1 ? <Text>No results found!</Text> : null}
         {filterResults("$").length > 0 ? (
@@ -49,8 +49,8 @@ export default function SearchScreen() {
           />
         ) : null}
         {/* <ResultList results={filterResults('$$$$')} title="Luxury 💸" /> */}
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 }
 
