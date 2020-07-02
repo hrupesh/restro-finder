@@ -1,7 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, ImageBackground } from "react-native";
 import Rating from "./Rating";
-import { FontAwesome } from "@expo/vector-icons";
 
 export default function Restro({ restro }) {
   const image = { uri: restro.image_url };
@@ -32,12 +31,6 @@ export default function Restro({ restro }) {
         )}
       </Text>
       <Text style={styles.location}>{restro.location.city}</Text>
-      <FontAwesome.Button
-        name="facebook"
-        backgroundColor="#3b5998"
-      >
-        Login with Facebook
-      </FontAwesome.Button>
     </View>
   );
 }
