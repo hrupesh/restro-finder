@@ -14,7 +14,7 @@ export default function Rating(props) {
         <AntDesign name="star" size={20} color="#FFDF00" />
         <AntDesign name="star" size={20} color="#FFDF00" />
         <AntDesign name="star" size={20} color="#FFDF00" />
-        <AntDesign name="star" size={20} color="#FFDF00" />
+        <AntDesign name="star" size={20} borderRadius={50} color="#FFDF00" />
       </Text>
     );
   } else if (props.rating == 4) {

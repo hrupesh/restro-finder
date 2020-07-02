@@ -7,14 +7,15 @@ export default function Restro({ restro }) {
   return (
     <View style={{ marginHorizontal: 15 }}>
       <ImageBackground
-        borderBottomLeftRadius={25}
-        borderBottomRightRadius={25}
-        borderTopLeftRadius={25}
-        borderTopRightRadius={25}
-        fadeDuration={10}
+        borderBottomLeftRadius={15}
+        borderBottomRightRadius={15}
+        borderTopLeftRadius={15}
+        borderTopRightRadius={15}
+        fadeDuration={0}
         onProgress={() => alert("Loading.....")}
         source={image}
         style={styles.imgcontainer}
+        loadingIndicatorSource={{ url : 'https://media2.giphy.com/media/xTk9ZvMnbIiIew7IpW/giphy.gif' }}
       >
         <Text style={styles.name}>{restro.name}</Text>
         <Rating
