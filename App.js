@@ -8,7 +8,7 @@ const navigator = createStackNavigator({
 {
     initialRouteName:'Search',
     defaultNavigationOptions:{
-      title:'                     Restro Finder 🤑           ' ,
+      title:'Restro Finder 🤑 ' ,
     }
 });
 

@@ -56,11 +56,11 @@ export default function SearchScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#ddd",
+    backgroundColor: "#eee",
     flex: 1,
   },
   resultContainer: {
-    paddingHorizontal: 20,
+    paddingHorizontal: 15,
     paddingVertical: 10,
   },
 });

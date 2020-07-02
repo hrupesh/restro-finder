@@ -71,16 +71,17 @@ const styles = StyleSheet.create({
   },
   location: {
     position: "absolute",
-    bottom: 0,
+    bottom:0,
     right: 5,
     fontSize: 20,
     letterSpacing: 2,
     fontWeight: "bold",
+    marginBottom:-6
   },
   review_count: {
     fontSize: 12,
-    letterSpacing: 1,
-    fontWeight: "bold",
+    letterSpacing: 2,
+    fontWeight: "700",
   },
   phone: {
     fontSize: 16,
