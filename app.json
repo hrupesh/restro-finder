@@ -21,6 +21,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "A Restaurant finding app based on Yelp API",
+    "githubUrl": "https://github.com/hrupesh/restro-finder"
   }
 }

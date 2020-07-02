@@ -24,9 +24,11 @@ export default function Restro({ restro }) {
           counts={restro.review_count}
         />
       </ImageBackground>
-      <Text style={styles.phone}>
-        <Text style={styles.count}>{restro.review_count} Reviews</Text>
-      </Text>
+      {restro.review_count ? (
+        <Text style={styles.review_count}>{restro.review_count} Reviews</Text>
+      ) : (
+        "Not Available ⛔"
+      )}
       <Text style={styles.location}>{restro.location.city}</Text>
     </View>
   );
@@ -68,16 +70,18 @@ const styles = StyleSheet.create({
   location: {
     position: "absolute",
     bottom: 0,
-    right: 30,
+    right: 35,
     fontSize: 20,
     letterSpacing: 2,
     fontWeight: "bold",
-    marginBottom: -5,
+    marginBottom: -6,
   },
-  count: {
+  review_count: {
     fontSize: 12,
     letterSpacing: 2,
     fontWeight: "700",
+    marginLeft:10,
+    marginVertical:5
   },
   phone: {
     fontSize: 16,
