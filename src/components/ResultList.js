@@ -5,7 +5,7 @@ import Restro from "./Restro";
 
 export default function ResultList({ title, results }) {
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
       {/* <Text  style={styles.length} >({results.length})</Text> */}
       <FlatList
@@ -48,5 +48,12 @@ const styles = StyleSheet.create({
     textShadowRadius:5,
     // backgroundColor:'#ccc',
     paddingHorizontal:25
+  },
+  container:{
+      marginVertical:5,
+      paddingHorizontal:5,
+    //   elevation:10,
+      borderBottomColor:'#ddd',
+      borderBottomWidth:1.5
   }
 });
