@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
   container:{
       marginVertical:5,
       paddingVertical:10,
-    //   width:412,
       borderBottomColor:'#ddd',
       borderBottomWidth:1.5
   }
