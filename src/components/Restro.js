@@ -26,7 +26,7 @@ export default function Restro({ restro }) {
       </ImageBackground>
       <Text style={styles.phone}>
         {restro.review_count ? (
-          <Text style={styles.location}>{restro.review_count}</Text>
+          <Text style={styles.review_count}>{restro.review_count} Reviews</Text>
         ) : (
           "Not Available ⛔"
         )}
@@ -75,6 +75,11 @@ const styles = StyleSheet.create({
     right: 5,
     fontSize: 20,
     letterSpacing: 2,
+    fontWeight: "bold",
+  },
+  review_count: {
+    fontSize: 12,
+    letterSpacing: 1,
     fontWeight: "bold",
   },
   phone: {
