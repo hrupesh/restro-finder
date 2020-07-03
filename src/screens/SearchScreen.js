@@ -4,7 +4,7 @@ import SearchBar from "../components/SearchBar";
 import { StatusBar } from "expo-status-bar";
 import useResults from "../hooks/useResults";
 import ResultList from "../components/ResultList";
-import { ScrollView } from "react-native-gesture-handler";
+import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 
 export default function SearchScreen(props) {
   const [query, setQuery] = useState("");
