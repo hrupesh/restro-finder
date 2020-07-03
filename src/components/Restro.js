@@ -7,7 +7,7 @@ export default function Restro({ restro }) {
   const image = { uri: restro.image_url };
   return (
     <View>
-      <TouchableOpacity activeOpacity={0.8}>
+      {/* <TouchableOpacity activeOpacity={0.8}> */}
         <ImageBackground
           borderBottomLeftRadius={15}
           borderBottomRightRadius={15}
@@ -26,7 +26,7 @@ export default function Restro({ restro }) {
             counts={restro.review_count}
           />
         </ImageBackground>
-      </TouchableOpacity>
+      {/* </TouchableOpacity> */}
       {restro.review_count ? (
         <Text style={styles.review_count}>{restro.review_count} Reviews</Text>
       ) : (

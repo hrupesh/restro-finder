@@ -6,10 +6,11 @@ import useResults from "../hooks/useResults";
 import ResultList from "../components/ResultList";
 import { ScrollView } from "react-native-gesture-handler";
 
-export default function SearchScreen() {
+export default function SearchScreen(props) {
   const [query, setQuery] = useState("");
   const [searchAPI, results, error] = useResults();
 
+  console.log(props);
   const filterResults = (price) => {
     return results.filter((result) => {
       return result.price === price;
