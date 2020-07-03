@@ -3,9 +3,8 @@ import { StyleSheet, Text, View, ImageBackground } from "react-native";
 import Rating from "./Rating";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-export default function Restro({ restro }, props) {
+export default function Restro({ restro }) {
   const image = { uri: restro.image_url };
-  console.log(props);
   return (
     <View>
       <TouchableOpacity activeOpacity={0.8}>
