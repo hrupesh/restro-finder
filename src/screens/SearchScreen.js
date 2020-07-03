@@ -21,7 +21,7 @@ export default function SearchScreen() {
       return !("price" in result);
     });
   };
-
+lksjdfn
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor="#448AFFCF"></StatusBar>
