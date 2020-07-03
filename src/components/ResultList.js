@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { ScrollView, FlatList } from "react-native-gesture-handler";
 import Restro from "./Restro";
 
-export default function ResultList({ title, results, navigation }) {
+export default function ResultList({ title, results }) {
 //   console.log(navigation);
   return (
     <View style={styles.container}>
@@ -15,7 +15,7 @@ export default function ResultList({ title, results, navigation }) {
         data={results}
         keyExtractor={(result) => result.id}
         renderItem={({ item }) => {
-          return <Restro navigation={navigation} restro={item} />;
+          return <Restro restro={item} />;
         }}
         style={styles.list}
       />

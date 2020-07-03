@@ -4,7 +4,7 @@ import Rating from "./Rating";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { withNavigation } from "react-navigation";
 
-export default function Restro({ restro, navigation }) {
+function Restro({ restro, navigation }) {
   const image = { uri: restro.image_url };
   //   console.log(navigation);
   return (
@@ -97,3 +97,5 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
 });
+
+export default withNavigation(Restro);
