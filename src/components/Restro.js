@@ -11,7 +11,7 @@ function Restro({ restro, navigation }) {
     <View>
       <TouchableOpacity
         activeOpacity={0.8}
-        onPress={() => navigation.navigate("Restro")}
+        onPress={() => navigation.navigate("Restro",{id:restro.id})}
       >
         <ImageBackground
           borderBottomLeftRadius={15}
