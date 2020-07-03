@@ -7,6 +7,7 @@ export default () => {
 
   const searchAPI = async (searchTerm) => {
     try {
+      setResults([]);
       const response = await yelp.get("/search", {
         params: {
           limit: 50,

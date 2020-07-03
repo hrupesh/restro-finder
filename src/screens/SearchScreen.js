@@ -34,9 +34,10 @@ export default function SearchScreen() {
         {error ? <Text>{error}</Text> : null}
         {results.length < 1 ? (
           <Image
+            style={styles.loader}
             source={{
               uri:
-                "https://static-steelkiwi-dev.s3.amazonaws.com/media/filer_public/1c/1e/1c1ef198-ca28-42f0-866e-056d6ba5fc44/68f1c83f-5881-4e6b-9e6c-b213f987b21f.gif",
+                "https://i.ya-webdesign.com/images/transparent-welcome-gif-background-3.gif",
             }}
           />
         ) : null}
@@ -70,5 +71,11 @@ const styles = StyleSheet.create({
     // paddingHorizontal: 15,
     paddingVertical: 10,
     flex: 1,
+  },
+  loader: {
+    // flex:1,
+    height: 300,
+    width: 300,
+    margin: 50,
   },
 });
