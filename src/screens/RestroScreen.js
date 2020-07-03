@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 
 export default function RestroScreen({ navigation }) {
   //   console.log(props);
+  const id = navigation.state.params.id;
 
   const searchAPI = async (searchTerm) => {
     try {
@@ -24,7 +25,7 @@ export default function RestroScreen({ navigation }) {
   return (
     <View>
       <Text>This is Restro Screen!</Text>
-      <Text>ID : {navigation.state.params.id}</Text>
+      <Text>ID : {id}</Text>
     </View>
   );
 }
