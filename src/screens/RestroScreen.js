@@ -5,7 +5,7 @@ import yelp from "../api/yelp";
 export default function RestroScreen({ navigation }) {
   //   console.log(props);
   const id = navigation.state.params.id;
-  const [result, setResult] = useState([]);
+  const [result, setResult] = useState(null);
 
   const getResult = async (id) => {
     const res = await yelp.get(`/${id}`);
