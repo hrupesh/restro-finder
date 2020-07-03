@@ -1,9 +1,11 @@
 import {createAppContainer, createStackNavigator} from 'react-navigation';
 import SearchScreen from './src/screens/SearchScreen';
+import RestroScreen from './src/screens/RestroScreen';
 
 
 const navigator = createStackNavigator({
-      Search: SearchScreen
+      Search: SearchScreen,
+      Restro: RestroScreen
 },
 {
     initialRouteName:'Search',

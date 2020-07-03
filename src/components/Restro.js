@@ -1,29 +1,33 @@
 import React from "react";
 import { StyleSheet, Text, View, ImageBackground } from "react-native";
 import Rating from "./Rating";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
-export default function Restro({ restro }) {
+export default function Restro({ restro }, props) {
   const image = { uri: restro.image_url };
+  console.log(props);
   return (
     <View>
-      <ImageBackground
-        borderBottomLeftRadius={15}
-        borderBottomRightRadius={15}
-        borderTopLeftRadius={15}
-        borderTopRightRadius={15}
-        fadeDuration={0}
-        // onProgress={() => alert("Loading.....")}
-        source={image}
-        style={styles.imgcontainer}
-        // loadingIndicatorSource={{ url : 'https://media2.giphy.com/media/xTk9ZvMnbIiIew7IpW/giphy.gif' }}
-      >
-        <Text style={styles.name}>{restro.name}</Text>
-        <Rating
-          style={styles.rating}
-          rating={Math.round(restro.rating)}
-          counts={restro.review_count}
-        />
-      </ImageBackground>
+      <TouchableOpacity activeOpacity={0.8}>
+        <ImageBackground
+          borderBottomLeftRadius={15}
+          borderBottomRightRadius={15}
+          borderTopLeftRadius={15}
+          borderTopRightRadius={15}
+          fadeDuration={0}
+          // onProgress={() => alert("Loading.....")}
+          source={image}
+          style={styles.imgcontainer}
+          // loadingIndicatorSource={{ url : 'https://media2.giphy.com/media/xTk9ZvMnbIiIew7IpW/giphy.gif' }}
+        >
+          <Text style={styles.name}>{restro.name}</Text>
+          <Rating
+            style={styles.rating}
+            rating={Math.round(restro.rating)}
+            counts={restro.review_count}
+          />
+        </ImageBackground>
+      </TouchableOpacity>
       {restro.review_count ? (
         <Text style={styles.review_count}>{restro.review_count} Reviews</Text>
       ) : (
@@ -80,8 +84,8 @@ const styles = StyleSheet.create({
     fontSize: 12,
     letterSpacing: 2,
     fontWeight: "700",
-    marginLeft:10,
-    marginVertical:5
+    marginLeft: 10,
+    marginVertical: 5,
   },
   phone: {
     fontSize: 16,
