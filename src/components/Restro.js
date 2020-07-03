@@ -2,12 +2,17 @@ import React from "react";
 import { StyleSheet, Text, View, ImageBackground } from "react-native";
 import Rating from "./Rating";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { withNavigation } from "react-navigation";
 
-export default function Restro({ restro }) {
+export default function Restro({ restro, navigation }) {
   const image = { uri: restro.image_url };
+  //   console.log(navigation);
   return (
     <View>
-      {/* <TouchableOpacity activeOpacity={0.8}> */}
+      <TouchableOpacity
+        activeOpacity={0.8}
+        onPress={() => navigation.navigate("Restro")}
+      >
         <ImageBackground
           borderBottomLeftRadius={15}
           borderBottomRightRadius={15}
@@ -26,7 +31,7 @@ export default function Restro({ restro }) {
             counts={restro.review_count}
           />
         </ImageBackground>
-      {/* </TouchableOpacity> */}
+      </TouchableOpacity>
       {restro.review_count ? (
         <Text style={styles.review_count}>{restro.review_count} Reviews</Text>
       ) : (

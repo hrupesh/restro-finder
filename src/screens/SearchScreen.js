@@ -6,11 +6,10 @@ import useResults from "../hooks/useResults";
 import ResultList from "../components/ResultList";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 
-export default function SearchScreen(props) {
+export default function SearchScreen({ navigation }) {
   const [query, setQuery] = useState("");
   const [searchAPI, results, error] = useResults();
 
-  console.log(props);
   const filterResults = (price) => {
     return results.filter((result) => {
       return result.price === price;
@@ -35,18 +34,31 @@ export default function SearchScreen(props) {
         {error ? <Text>{error}</Text> : null}
         {results.length < 1 ? <Text>No results found!</Text> : null}
         {filterResults("$").length > 0 ? (
-          <ResultList results={filterResults("$")} title="Wallet Friendly 🤑" />
+          <ResultList
+            results={filterResults("$")}
+            navigation={navigation}
+            title="Wallet Friendly 🤑"
+          />
         ) : null}
         {filterResults("$$").length > 0 ? (
-          <ResultList results={filterResults("$$")} title="Expensive 💰" />
+          <ResultList
+            results={filterResults("$$")}
+            navigation={navigation}
+            title="Expensive 💰"
+          />
         ) : null}
         {filterResults("$$$").length > 0 ? (
-          <ResultList results={filterResults("$$$")} title="Luxury 💸" />
+          <ResultList
+            results={filterResults("$$$")}
+            navigation={navigation}
+            title="Luxury 💸"
+          />
         ) : null}
         {filterResultsOthers("$$$$").length > 0 ? (
           <ResultList
             results={filterResultsOthers("$$$$")}
             title="Other Places 🏚 "
+            navigation={navigation}
           />
         ) : null}
         {/* <ResultList results={filterResults('$$$$')} title="Luxury 💸" /> */}
