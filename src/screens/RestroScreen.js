@@ -30,9 +30,8 @@ export default function RestroScreen({ navigation }) {
       ) : (
         <View>
           <Text>This is Restro Screen!</Text>
-          <Text>
-            ID : {id} , Result : {result.name}
-          </Text>
+          <Text>ID : {id}</Text>
+          <Text>Result : {result.name}</Text>
         </View>
       )}
     </View>
