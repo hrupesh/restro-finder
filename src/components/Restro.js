@@ -5,8 +5,8 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import { withNavigation } from "react-navigation";
 
 function Restro({ restro, navigation }) {
-  const image = { uri: restro.image_url };
-  //   console.log(navigation);
+  const image = restro.image_url;
+  // console.log(image);
   return (
     <View>
       <TouchableOpacity
@@ -20,11 +20,11 @@ function Restro({ restro, navigation }) {
           borderTopRightRadius={15}
           fadeDuration={0}
           // onProgress={() => alert("Loading.....")}
-          source={
-            image
+          source={{
+            uri: image
               ? image
-              : "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png"
-          }
+              : "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png",
+          }}
           style={styles.imgcontainer}
           // loadingIndicatorSource={{ url : 'https://media2.giphy.com/media/xTk9ZvMnbIiIew7IpW/giphy.gif' }}
         >
