@@ -39,7 +39,9 @@ export default function RestroScreen({ navigation }) {
     <View style={styles.container}>
       <Text style={styles.text}> {result.name}</Text>
       <FlatList
-      showsVerticalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}
+        horizontal
         data={result.photos}
         keyExtractor={(photo) => photo}
         renderItem={({ item }) => {
@@ -48,9 +50,9 @@ export default function RestroScreen({ navigation }) {
             <Image
               resizeMode="contain"
               source={{
-                uri:  item
-              ? item
-              : "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png",
+                uri: item
+                  ? item
+                  : "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png",
               }}
               style={styles.img}
             />
