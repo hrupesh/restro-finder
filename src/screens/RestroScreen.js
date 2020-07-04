@@ -45,9 +45,9 @@ export default function RestroScreen({ navigation }) {
         showsVerticalScrollIndicator={false}
         scrollToOverflowEnabled
       >
-        <Image source={{ uri: photos[0] }} style={styles.img} />
-        <Image source={{ uri: photos[1] }} style={styles.img} />
-        <Image source={{ uri: photos[2] }} style={styles.img} />
+        <Image source={{ uri: photos[0] ? photos[0] : "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png" }} style={styles.img} />
+        <Image source={{ uri: photos[1] ? photos[1] : "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png" }} style={styles.img} />
+        <Image source={{ uri: photos[2] ? photos[2] : "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png" }} style={styles.img} />
       </ScrollView>
     </View>
   );

@@ -11,7 +11,7 @@ function Restro({ restro, navigation }) {
     <View>
       <TouchableOpacity
         activeOpacity={0.8}
-        onPress={() => navigation.navigate("Restro",{id:restro.id})}
+        onPress={() => navigation.navigate("Restro", { id: restro.id })}
       >
         <ImageBackground
           borderBottomLeftRadius={15}
@@ -20,7 +20,11 @@ function Restro({ restro, navigation }) {
           borderTopRightRadius={15}
           fadeDuration={0}
           // onProgress={() => alert("Loading.....")}
-          source={image}
+          source={
+            image
+              ? image
+              : "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png"
+          }
           style={styles.imgcontainer}
           // loadingIndicatorSource={{ url : 'https://media2.giphy.com/media/xTk9ZvMnbIiIew7IpW/giphy.gif' }}
         >
