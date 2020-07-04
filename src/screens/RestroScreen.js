@@ -17,21 +17,36 @@ export default function RestroScreen({ navigation }) {
     console.log(photos);
   };
 
+  //   getResult(id);
+
   useEffect(() => {
     getResult(id);
   }, []);
 
+  //   if (!result || !photos) {
+  //     return null;
+  //   }
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}> {result.name}</Text>
-      <ScrollView style={styles.scrollcontainer}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-      >
-        <Image source={{ uri: photos[0] }} style={styles.img} />
-        <Image source={{ uri: photos[1] }} style={styles.img} />
-        <Image source={{ uri: photos[2] }} style={styles.img} />
-      </ScrollView>
+    <View>
+      {!result || !photos ? (
+        <Text>Loading.......</Text>
+      ) : (
+        <View style={styles.container}>
+          <Text style={styles.text}> {result.name}</Text>
+          <ScrollView
+            style={styles.scrollcontainer}
+            // horizontal
+            showsHorizontalScrollIndicator={false}
+            showsVerticalScrollIndicator={false}
+            scrollToOverflowEnabled
+          >
+            <Image source={{ uri: photos[0] }} style={styles.img} />
+            <Image source={{ uri: photos[1] }} style={styles.img} />
+            <Image source={{ uri: photos[2] }} style={styles.img} />
+          </ScrollView>
+        </View>
+      )}
     </View>
   );
 }
@@ -59,10 +74,10 @@ const styles = StyleSheet.create({
     height: 600,
     width: "100%",
     marginVertical: 20,
-    borderRadius:10
+    borderRadius: 10,
   },
-  scrollcontainer:{
-      height:600,
-      width:'100%',
-  }
+  scrollcontainer: {
+    height: 600,
+    width: "100%",
+  },
 });
