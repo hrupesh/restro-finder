@@ -50,6 +50,9 @@ export default function SearchScreen() {
         {filterResults("$$$").length > 0 ? (
           <ResultList results={filterResults("$$$")} title="Luxury 💸" />
         ) : null}
+        {filterResults("$$$$").length > 0 ? (
+          <ResultList results={filterResults("$$$")} title="Extravagance  💵💵" />
+        ) : null}
         {filterResultsOthers("$$$$").length > 0 ? (
           <ResultList
             results={filterResultsOthers("$$$$")}

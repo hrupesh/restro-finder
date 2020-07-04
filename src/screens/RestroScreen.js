@@ -19,7 +19,7 @@ export default function RestroScreen({ navigation }) {
 
   return (
     <View>
-      {result.length === 0 ? (
+      {result === null ? (
         <Image
           style={styles.loader}
           source={{
