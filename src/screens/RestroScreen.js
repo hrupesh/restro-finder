@@ -38,17 +38,60 @@ export default function RestroScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}> {result.name}</Text>
-      <ScrollView
+      <FlatList
+      showsVerticalScrollIndicator={false}
+        data={result.photos}
+        keyExtractor={(photo) => photo}
+        renderItem={({ item }) => {
+          console.log(item);
+          return (
+            <Image
+              resizeMode="contain"
+              source={{
+                uri:  item
+              ? item
+              : "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png",
+              }}
+              style={styles.img}
+            />
+          );
+        }}
+      />
+      {/* <ScrollView
         style={styles.scrollcontainer}
         // horizontal
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
         scrollToOverflowEnabled
       >
-        <Image source={{ uri: photos[0] ? photos[0] : "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png" }} style={styles.img} />
-        <Image source={{ uri: photos[1] ? photos[1] : "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png" }} style={styles.img} />
-        <Image source={{ uri: photos[2] ? photos[2] : "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png" }} style={styles.img} />
-      </ScrollView>
+        <Image
+          resizeMode="contain"
+          source={{
+            uri: photos[0]
+              ? photos[0]
+              : "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png",
+          }}
+          style={styles.img}
+        />
+        <Image
+          resizeMode="contain"
+          source={{
+            uri: photos[1]
+              ? photos[1]
+              : "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png",
+          }}
+          style={styles.img}
+        />
+        <Image
+          resizeMode="contain"
+          source={{
+            uri: photos[2]
+              ? photos[2]
+              : "https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png",
+          }}
+          style={styles.img}
+        />
+      </ScrollView> */}
     </View>
   );
 }
@@ -74,7 +117,7 @@ const styles = StyleSheet.create({
   },
   img: {
     height: 600,
-    width: "100%",
+    width: 400,
     marginVertical: 20,
     borderRadius: 10,
   },
@@ -83,9 +126,9 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   loader: {
-    flex:1,
-    height:'100%',
-    width: '100%',
+    flex: 1,
+    height: "100%",
+    width: "100%",
     // marginVertical: "50%",
     alignSelf: "center",
   },
