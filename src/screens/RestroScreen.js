@@ -6,11 +6,13 @@ export default function RestroScreen({ navigation }) {
   //   console.log(props);
   const id = navigation.state.params.id;
   const [result, setResult] = useState(null);
+  const [photos, setPhotos] = useState(null);
 
   const getResult = async (id) => {
     const res = await yelp.get(`/${id}`);
     setResult(res.data);
     console.log(result);
+    setPhotos(result.photos);
   };
 
   useEffect(() => {
