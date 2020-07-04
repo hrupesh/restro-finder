@@ -120,8 +120,8 @@ const styles = StyleSheet.create({
   img: {
     height: 600,
     width: 400,
-    marginVertical: 20,
-    borderRadius: 10,
+    // marginVertical: 20,
+    borderRadius: 5,
   },
   scrollcontainer: {
     height: 600,
