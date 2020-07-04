@@ -23,30 +23,32 @@ export default function RestroScreen({ navigation }) {
     getResult(id);
   }, []);
 
-  //   if (!result || !photos) {
-  //     return null;
-  //   }
+  if (!result || !photos) {
+    return (
+      <Image
+        style={styles.loader}
+        source={{
+          uri:
+            "https://media2.giphy.com/media/11FuEnXyGsXFba/giphy.gif?cid=ecf05e47b44bdaa29169be7e7946c6d20e0efd915d2aed95&rid=giphy.gif",
+        }}
+      />
+    );
+  }
 
   return (
-    <View>
-      {!result || !photos ? (
-        <Text>Loading.......</Text>
-      ) : (
-        <View style={styles.container}>
-          <Text style={styles.text}> {result.name}</Text>
-          <ScrollView
-            style={styles.scrollcontainer}
-            // horizontal
-            showsHorizontalScrollIndicator={false}
-            showsVerticalScrollIndicator={false}
-            scrollToOverflowEnabled
-          >
-            <Image source={{ uri: photos[0] }} style={styles.img} />
-            <Image source={{ uri: photos[1] }} style={styles.img} />
-            <Image source={{ uri: photos[2] }} style={styles.img} />
-          </ScrollView>
-        </View>
-      )}
+    <View style={styles.container}>
+      <Text style={styles.text}> {result.name}</Text>
+      <ScrollView
+        style={styles.scrollcontainer}
+        // horizontal
+        showsHorizontalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
+        scrollToOverflowEnabled
+      >
+        <Image source={{ uri: photos[0] }} style={styles.img} />
+        <Image source={{ uri: photos[1] }} style={styles.img} />
+        <Image source={{ uri: photos[2] }} style={styles.img} />
+      </ScrollView>
     </View>
   );
 }
@@ -79,5 +81,12 @@ const styles = StyleSheet.create({
   scrollcontainer: {
     height: 600,
     width: "100%",
+  },
+  loader: {
+    flex:1,
+    height:'100%',
+    width: '100%',
+    // marginVertical: "50%",
+    alignSelf: "center",
   },
 });
