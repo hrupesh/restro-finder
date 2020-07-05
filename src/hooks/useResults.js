@@ -26,5 +26,7 @@ export default () => {
     searchAPI("tacos");
   }, []);
 
+  console.log('asdasd');
+  
   return [searchAPI, results, error];
 };
