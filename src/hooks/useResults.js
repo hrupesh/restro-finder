@@ -29,6 +29,7 @@ export default () => {
   console.log('asdasd');
   console.log('asdasd');
   console.log('asdasd');
+  console.log('asdasd');
 
   return [searchAPI, results, error];
 };
